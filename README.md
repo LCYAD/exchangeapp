@@ -18,18 +18,27 @@ This is a full-stack application which uses the following:
 
 The reason 
 
-
-## **Comments (Trade-offs, Left-out etc)
+## **Comments (Trade-offs, Left-out etc)**
 
 Trade-off
 
-## **Link to other code
+## **How to use**
+
+* Clone the project onto your drive
+* Install [Redis Server](https://github.com/NodeRedis/node_redis "Redis Server"), NodeJS & npm
+* Do `npm install` inside './' and './frontend'
+* Get your API key from [openexchange.org](https://openexchangerates.org/ "openexchange.org")
+* Add your API key opening a .env file in the same location as server.js and then put in `APP_ID="YOUR API ID HERE"`
+* Start Redis-server(Ubuntu) by typing `redis-server --daemonize yes`
+* type `npm start` to start the server
+
+## **Link to other code**
 
 Deals Hub
 demo: [https://dealshub.space/](https://dealshub.space/ "Deals Hub Demo") 
 code: [Deals Hub Github](https://github.com/Midori-Funaki/OnlineMarketplace/ "Deals Hub Github") 
 
-## **Link to public profile
+## **Link to public profile**
 
-Linkedin: [https://www.linkedin.com/in/adrian-lee-244248147/](https://www.linkedin.com/in/adrian-lee-244248147/ "My Linkedin Profile") 
+Linkedin: [My Linkedin Profile](https://www.linkedin.com/in/adrian-lee-244248147/ "My Linkedin Profile") 
 
