@@ -1,0 +1,12 @@
+.exchange-container {
+    height: 400px;
+    overflow-y: auto;
+    padding: 20px 10%;
+}
+
+.exchange-result {
+    overflow-y: auto;
+    height: 230px;
+    text-align: center;
+    
+}

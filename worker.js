@@ -15,8 +15,9 @@ class Worker {
             if (data) {
                 let response = JSON.parse(data[1]);
                 let symbols = (response.req.symbols === '') ? '' : '&symbols=' + response.req.symbols;
+                let date = (response.req.type === 'historical') ? '/'+response.req.date: '';
                 // call the openExchange API based on the incoming request
-                axios.get(  'https://openexchangerates.org/api/'+response.req.type+'.json'+
+                axios.get(  'https://openexchangerates.org/api/'+response.req.type+date+'.json'+
                             '?app_id='+this.appID+
                              symbols
                          )

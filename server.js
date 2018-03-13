@@ -36,7 +36,8 @@ axios.get('https://openexchangerates.org/api/currencies.json')
 app.get('/api/ex/', (req, res) => {
     let input = {
         type: req.param('type', 'latest'),
-        symbols: req.param('symbols', '')
+        symbols: req.param('symbols', ''),
+        date: req.param('date', ''),
     }
     let id = uuid();
     master.processReq(input, id).then((message)=>{

@@ -1,0 +1,17 @@
+.past-part {
+    height: 300px;
+    width: 100%;
+    background: rgba(114, 114, 207, 0.493);
+    padding: 20px 10%;
+}
+
+.past-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(46, 40, 40);
+}
+
+.no-result {
+    text-align: center;
+}

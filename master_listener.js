@@ -15,7 +15,7 @@ class MasterListener {
                 if (err) reject(err);
             });
             this.masterlistener.on('message', (channel, message)=>{
-                console.log('Resolving from ' + channel + ' of message ' + message);
+                // console.log('Resolving from ' + channel + ' of message ' + message);
                 resolve(message);
             });
         });
