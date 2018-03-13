@@ -21,6 +21,7 @@ The reason I choose React with Redux as my frontend is because I
 ## **Comments (Trade-offs, Left-out etc)**
 
 Trade-off:  Focusing more on Backend (especially on horizontal scaling) than on Front-end as not familiar with the concept and how to implement.
+
 Left-out: 
 *   For the front-end, I left out the following:
     1. Past Record implementation - The idea was that I should be storing the last 5 request on the LocalStorage such that each time you refresh the page you can see what you have previously searched for.
@@ -40,7 +41,7 @@ Left-out:
 * Add your API key opening a .env file in the same location as server.js and then put in `APP_ID="YOUR API ID HERE"`
 * Start Redis-server(Ubuntu) by typing `redis-server --daemonize yes`
 * Start the worker (at least one or as many as your want) by type `node worker.js` using a different terminal or using PM2
-* type `yarn start` to start the server
+* type `yarn start` in './frontend' to start the SPA and `node server.js` to start the backend server.
 
 ## **Link to other code**
 
