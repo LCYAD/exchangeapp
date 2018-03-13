@@ -22,7 +22,7 @@ class Worker {
                              symbols
                          )
                 .then((result)=>{
-                    console.log(result.data);
+                    // console.log(result.data);
                     this.worker.PUBLISH(response.id, JSON.stringify(result.data) , (err)=>{
                         if (err) {
                             console.log(err);
