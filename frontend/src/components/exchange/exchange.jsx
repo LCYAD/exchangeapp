@@ -82,7 +82,7 @@ class Exchange extends React.Component {
 
     requestData(options) {
         this.props.resultLoading(true);
-        axios.get('http://52.74.237.18/api/ex?'+options)
+        axios.get('http://localhost:8000/api/ex?'+options)
         .then((data)=>{
             let currency_result = [];
             for (let item in data.data.rates) {
@@ -213,7 +213,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         getCurrencyList: () => {
-            axios.get('http://52.74.237.18/api/currencylist').then((data) => {
+            axios.get('http://localhost:8000/api/currencylist').then((data) => {
                 let currency_list = [];
                 for (let item in data.data) {
                     currency_list.push(
