@@ -22,6 +22,10 @@ As for the horizontal scaling, please see the following chart:
 
 ![Alt](/pubsub.png "Redis Pub/Sub")
 
+Basically, there are the workers (you can open as many as possible by using multiple terminal or assigning different port in PM2) which listens to the Redis Server by using BLPOP (basically queuing for work) and whenever the server/master receive a request it will push the work to the redis server while subscribing to a unique channel to listen for the response and the worker whom received the job will do the necessary task, which is calling the openexchange API in this problem, and then publish the result back through the unique channel subscribed by the server/master (after the master receive the data the channel will be unsubscribed) then passed back to front-end.  The reason for the unique ID channel is to prevent multiple reply from the worker on the same channel which will make it impossible for the master to match the result with the relevant request.
+
+The choice of this model is such that one can expand the amount of workers based on the estimated load of the request which satisfy the idea of horizontal scaling.
+
 ## **Comments (Trade-offs, Left-out etc)**
 
 Trade-off:  Focusing more on Backend (especially on horizontal scaling) than on Front-end as I was not familiar with horizontal scaling and how to implement.
