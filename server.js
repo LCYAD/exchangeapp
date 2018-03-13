@@ -49,10 +49,15 @@ app.get('/api/ex/', (req, res) => {
 
 app.get('/api/currencylist', (req, res)=>{
     res.json(currency_list);
+});
+
+//redirect all other route to the SPA
+app.use(function(req, res, next) {
+    res.sendFile(__dirname + "/frontend/build/index.html");
 })
 
 // express server listening to port 8000
-const port = 8000;
+const port = 8080;
 
 app.listen(port, ()=>{
     console.log('Server is running at port ' + port);
